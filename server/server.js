@@ -2,14 +2,6 @@ import express from "express";
 import mysql from "mysql2";
 import cors from "cors";
 
-async function loadEnv() {
-  await import("dotenv").then(({ config }) => {
-    config();
-  });
-}
-
-loadEnv();
-
 const app = express();
 app.use(cors());
 app.use(express.json());
